@@ -1,31 +1,55 @@
-// Your code here
-/*
-`mapToNegativize(sourceArray)`
-- `mapToNoChange(sourceArray)`
-- `mapToDouble(sourceArray)`
-- `mapToSquare(sourceArray)`*/
-sourceArray = [1,2,3];
-function mapToNegativize(sourceArray){
- let  newArray =[];
- for(let i=0;i<sourceArray.length;i++)
- newArray[i]= sourceArray[i]*-1;
-return newArray;
+const mapToNegativize = (sourceArray) => {
+    const negArray = [];
+    for(let x of sourceArray){
+        negArray.push(x = x * -1)
+    }
+    return negArray
 }
-mapToNegativize(sourceArray);
-function mapToNoChange(sourceArray){
-  return sourceArray;
+
+const mapToNoChange = (sourceArray) => {
+    return sourceArray
 }
-mapToNegativize(sourceArray);
-function mapToDouble(sourceArray){
-  let newArray=[];
-  for(let i=0;i<sourceArray.length;i++)
-  newArray[i]= sourceArray[i]*2;
-return newArray;
+
+const mapToDouble = (sourceArray) => {
+    const doubleArray = [];
+    for(let x of sourceArray){
+        doubleArray.push(x = x * 2)
+    }
+    return doubleArray
 }
-function mapTosquare(sourceArray){
-  let newArray=[];
-  for(let i=0;i<sourceArray.length;i++)
-  newArray[i]=   Math.pow(sourceArray[i],2);
-  Math.pow(sourceArray[i],2)
-return newArray;
+
+const mapToSquare = (sourceArray) => {
+    const squareArray = [];
+    for(let x of sourceArray){
+        squareArray.push(x = x**2)
+    }
+    return squareArray
 }
+
+const reduceToTotal = (sourceArray, startingPoint=0) => {
+    let total = startingPoint
+    for(let num of sourceArray){
+        total = total + num
+    }
+    return total
+}
+
+const reduceToAllTrue = (sourceArray) => {
+    let value = true
+    for(let item of sourceArray){
+        if (item === false){
+            value = false
+        }
+    }
+    return value
+}
+
+const reduceToAnyTrue = (sourceArray) => {
+    let value = false
+    for(let item of sourceArray){
+        if (item === true){
+            value = true
+        }
+    }
+    return value
+} 
